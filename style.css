@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f4f4f9;
+}
+
+.calculator {
+  width: 320px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* 화면 스타일 */
+.display {
+  width: 100%;
+  height: 80px;
+  background-color: #222222;
+  color: #ffffff;
+  text-align: right;
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 80px;
+  padding: 0 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+/* 그리드 레이아웃 */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 60px);
+  gap: 12px;
+}
+
+/* 버튼 기본 스타일 */
+.btn {
+  border: none;
+  background-color: #f0f0f3;
+  color: #333333;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #e0e0e5;
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+/* 연산자 버튼 */
+.btn-operator {
+  background-color: #ff9f0a;
+  color: #ffffff;
+}
+
+.btn-operator:hover {
+  background-color: #e08c07;
+}
+
+/* 초기화(C) 버튼 */
+.btn-clear {
+  background-color: #ff453a;
+  color: #ffffff;
+}
+
+.btn-clear:hover {
+  background-color: #d7372d;
+}
+
+/* 등호(=) 버튼 - 2칸 세로 병합 */
+.btn-equal {
+  grid-column: 4;
+  grid-row: 4 / span 2;
+  background-color: #30d158;
+  color: #ffffff;
+}
+
+.btn-equal:hover {
+  background-color: #28b84c;
+}
+
+/* '+' 버튼 - 2칸 세로 병합 */
+.btn-plus {
+  grid-column: 4;
+  grid-row: 2 / span 2;
+}
+
+/* '0' 버튼 - 2칸 가로 병합 */
+.btn-zero {
+  grid-column: 1 / span 2;
+}
