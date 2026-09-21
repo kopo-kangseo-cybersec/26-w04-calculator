@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.calculator {
+    background-color: #22252d;
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 320px;
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    background-color: #292d36;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+/* 그리드 레이아웃 설정 */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.btn {
+    height: 60px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #292d36;
+    color: #ffffff;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: #353b48;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* C(초기화) 버튼 - 3칸 차치 */
+.btn-clear {
+    grid-column: span 3;
+    background-color: #ff5252;
+    color: #ffffff;
+}
+
+.btn-clear:hover {
+    background-color: #ff3838;
+}
+
+/* 연산자 버튼 */
+.btn-operator {
+    color: #26e7a6;
+}
+
+/* 0 버튼 - 3칸 차지 */
+.btn-zero {
+    grid-column: span 3;
+}
+
+/* = 버튼 */
+.btn-equal {
+    background-color: #26e7a6;
+    color: #22252d;
+}
+
+.btn-equal:hover {
+    background-color: #20ca90;
+}
